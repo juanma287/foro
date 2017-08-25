@@ -1,0 +1,20 @@
+<!--
+    *Ahora que tenemos una lista de posts (que eventualmente serán enviados por los usuarios),
+    *necesitamos una página individual donde nuestros usuarios puedan discutir sobre cada post.
+    *Esto significa que necesitaremos algún tipo de enrutamiento o routing para analizar lo que 
+    *hay dentro de la barra de direcciones del navegador y mostrar el contenido correcto.
+    *Por esto agrregamos el paquete Iron Router
+-->
+
+<!-- el template layout sera el diseño por default para todas las rutas 
+El ayudante {{> yield}} define una zona dinámica que mostrará automáticamente lo que corresponde a la ruta actual
+-->
+<template name="layout">
+  <div class="container">
+    {{> header}}
+    {{> errores}}
+    <div id="main">
+      {{> yield}}
+    </div>
+  </div>
+</template>

@@ -1,0 +1,26 @@
+<!--Aca tenemos los posts individuales
+
+El atributo name="postsList" del elemento template. Este será el nombre que Meteor usará 
+para saber donde va cada plantilla.
+
+{{domain}} llama a un ayudante, {{url}} y {{title}} a una propiedad
+
+-->
+
+<template name="postItem">
+  <div class="post">
+    <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+    <div class="post-content">
+      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+       <p>
+           {{pluralize votes "Voto"}},
+           Creado por   <b>{{author}}</b> 
+            <!-- Uso creoElPost para que solo pueda editar un post el usaurio que lo creo-->   
+           {{#if creoElPost}}<a href="{{pathFor 'postEdit'}}">Editar Post</a>{{/if}}
+           <br>
+            <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comentario"}}</a>
+      </p>
+    </div>
+    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discusión</a>
+  </div>
+</template>

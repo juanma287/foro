@@ -1,0 +1,34 @@
+<!-- ACA TENEMOS LAS LISTA DE TODOS LOS POSTS
+
+INFO Spacebars es el sistema de plantillas de Meteor, es simplemente HTML mas tres cosas:
+    inclusiones: 
+        (san la sintaxis {{> templateName}} y simplemente le dicen a Meteor que reemplace
+        la inclusión por la plantilla del mismo nombre )
+
+    expresiones:
+       (como {{title}} pueden, o bien llamar a una propiedad del objeto actual o bien, 
+        al valor de retorno de un ayudante (helper) )
+
+    bloques:
+        de ayuda (tags especiales para mantener el control del flujo de la plantilla, 
+        por ejemplo {{#each}}…{{/each}} o {{#if}}…{{/if}}).
+
+la función de los template es mostrar o iterar sobre variables
+-->
+
+<template name="postsList">
+  <div class="posts">
+    {{#each posts}}
+      {{> postItem}}
+    {{/each}}
+    
+    {{#if nextPath}}
+      <a class="load-more" href="{{nextPath}}">Ver más</a>
+      {{else}}
+      {{#unless ready}}
+        {{> spinner}}
+      {{/unless}}
+    {{/if}}
+    
+  </div>
+</template>

@@ -1,0 +1,21 @@
+<!--
+vamos a configurar una ruta para mostrar los detalles de un solo post
+
+Más adelante añadiremos más elementos a esta plantilla (como los comentarios), 
+pero, por ahora, solo la vamos a usar para mostrar {{> PostItem}}
+-->
+<template name="postPage">
+  <div class="post-page page">
+    {{> postItem}}
+     <ul class="comments">
+      {{#each comments}}
+        {{> commentItem}}
+      {{/each}}
+    </ul>
+    {{#if currentUser}}
+      {{> commentSubmit}}
+    {{else}}
+      <p>Inicia sesión para dejar un comentario.</p>
+    {{/if}}
+  </div>
+</template>
