@@ -1,12 +1,29 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 Template.temas.helpers({ 
     temas: function()
     {    
         Temas.find();
     }
+});
+ */
+
+
+
+var listaTemas = [
+  {
+    title: 'Introducing Telescope',
+    url: 'http://sachagreif.com/introducing-telescope/'
+  },
+  {
+    title: 'Meteor',
+    url: 'http://meteor.com'
+  },
+  {
+    title: 'The Meteor Book',
+    url: 'http://themeteorbook.com'
+  }
+];
+Template.listaTemas.helpers({
+  temas: listaTemas
 });
