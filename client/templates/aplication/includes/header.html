@@ -7,13 +7,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{pathFor 'postsList'}}">Foro Plash</a>
+      <a class="navbar-brand" href="{{pathFor 'home'}}">Foro Plash</a>
     </div>
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
               <!-- El paquete accounts nos ofrece el ayudante currentUser que es el equivalente a Meteor.user() en Spacebars. -->
-           <li class="{{activeRouteClass 'home' 'newPosts'}}">             
-            <a href="{{pathFor 'newPosts'}}">Nuevos</a>
+             <li class="{{activeRouteClass  'temas'}}">             
+                    <a href="{{pathFor 'temas'}}">Temas</a>
+             </li>
+              
+              <li class="{{activeRouteClass 'home' 'newPosts'}}">             
+            <a href="{{pathFor 'newPosts'}}">Nuevos Posts</a>
              </li>
               <li class="{{activeRouteClass  'bestPosts'}}">
                  <a href="{{pathFor 'bestPosts'}}">M&aacute;s votados</a>
