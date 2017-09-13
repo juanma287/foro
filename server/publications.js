@@ -32,10 +32,17 @@ Meteor.publish('singlePost', function(id) {
 
 
 // publicamos la coleccion de temas
-
 Meteor.publish('temas', function() {
   return Temas.find();
 });
+
+// probe con esto pero no andubo
+/**
+Meteor.publish('temas', function(id) {
+  return Temas.find(id);
+});
+*/
+
 
 
 // publicamos la coleccion

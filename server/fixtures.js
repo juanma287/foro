@@ -73,9 +73,5 @@ if (Posts.find().count() === 0) {
     });
   }
   
-    for (var i = 0; i < 10; i++) {
-    Temas.insert({
-      title: 'Tema#' + i
-    });
-  }
+
 }
