@@ -13,13 +13,14 @@ Template.postSubmit.events({
     e.preventDefault();
 
     var post = {
-      url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      descripcion: $(e.target).find('[name=descripcion]').val(),
+      title: $(e.target).find('[name=title]').val(),
+      temaId: $(e.target).find('[name=temas]').val()
     };
     
     // Validamos un pocoo 
     var errors = validarPost(post);
-    if (errors.title || errors.url)
+    if (errors.title || errors.descripcion)
       return Session.set('postSubmitErrors', errors);
     
     // llamamos al metodo postInsert, pasamos el objeto post y habilitamos un callback, (que se ejecutará cuando el método del lado del servidor finalice)
@@ -30,7 +31,7 @@ Template.postSubmit.events({
 
      // Si el post ya existe avisamos y mostramos la ruta
      if (result.postExists)
-        throwError('Este enlace ya ha sido publicado');
+        throwError('Ya ha sido publicado un post con dicho título');
     
       // Si todo ha funcionado bien, redirigiremos al usuario a la página de discusión del post recién creado.
       Router.go('postPage', {_id: result._id});  
@@ -45,12 +46,16 @@ Template.postSubmit.onCreated(function() {
 
 
 //  Definimos dos ayudantes de plantilla. Ambos buscarán la propiedad field del objeto Session.get('postSubmitErrors')
-// (donde field será url o title dependiendo del ayudante desde que el que se llame)
+// (donde field será descripcion o title dependiendo del ayudante desde que el que se llame)
 Template.postSubmit.helpers({
   errorMessage: function(field) {
     return Session.get('postSubmitErrors')[field];
   },
   errorClass: function (field) {
     return !!Session.get('postSubmitErrors')[field] ? 'has-error' : '';
-  }
+  },
+  temas: function()
+    {    
+     return Temas.find();
+    }
 });

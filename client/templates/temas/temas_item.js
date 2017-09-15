@@ -5,5 +5,8 @@
  */
 
 
-// por esta verga no te mostraba nada
-Meteor.subscribe('temas');
+Template.temasItem.helpers({
+    temasCount: function() 
+    {   
+        return Posts.find({temaId: this._id}).count();  
+    }});

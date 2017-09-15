@@ -6,7 +6,34 @@ pero, por ahora, solo la vamos a usar para mostrar {{> PostItem}}
 -->
 <template name="postPage">
   <div class="post-page page">
-    {{> postItem}}
+      
+         <div class="post">
+               <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+               <div class="post-content">
+
+                 <h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
+                  <p>
+                     <b>  Creado por  </b> {{author}},
+                      {{pluralize votes "Voto"}},
+                      
+                       <!-- Uso creoElPost para que solo pueda editar un post el usaurio que lo creo-->   
+                      {{#if creoElPost}}<a href="{{pathFor 'postEdit'}}">Editar Post</a>{{/if}}
+                  
+                       <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comentario"}}</a>
+                 </p>
+               </div>
+
+             </div>
+    
+   
+     
+      <div class="post" style="background: #DADDE5">
+         <h4>{{title}}</h4>
+             <div class="post-content">
+         {{descripcion}}
+             </div>
+    </div>
+     
      <ul class="comments">
       {{#each comments}}
         {{> commentItem}}

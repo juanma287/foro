@@ -2,7 +2,11 @@
 <template name="temasItem">
   <div class="post">
     <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>probando</span></h3>
+      <h3><a href="{{pathFor 'temasPage'}}">{{title}}</a></h3>
+      <p>
+           {{postCount}} posts
+      </p>
+   
     </div>
     <a href="{{pathFor 'temasPage'}}" class="discuss btn btn-default">Ver Posts</a>
   </div>

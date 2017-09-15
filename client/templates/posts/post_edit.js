@@ -5,7 +5,7 @@ Template.postEdit.onCreated(function() {
 });
 
 //  Definimos dos ayudantes de plantilla. Ambos buscarán la propiedad field del objeto Session.get('postSubmitErrors')
-// (donde field será url o title dependiendo del ayudante desde que el que se llame)
+// (donde field será descripcion o title dependiendo del ayudante desde que el que se llame)
 Template.postEdit.helpers({
   errorMessage: function(field) {
     return Session.get('postEditErrors')[field];
@@ -26,13 +26,13 @@ Template.postEdit.events({
 
     // Obtenemos los nuevos valores del formulario 
     var postProperties = {
-      url: $(e.target).find('[name=url]').val(),
+      descripcion: $(e.target).find('[name=descripcion]').val(),
       title: $(e.target).find('[name=title]').val()
     }
 
 
     var errors = validarPost(postProperties);
-    if (errors.title || errors.url)
+    if (errors.title || errors.descripcion)
       return Session.set('postEditErrors', errors);
   
   
