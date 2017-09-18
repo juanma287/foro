@@ -6,7 +6,7 @@
 
 
 Template.temasItem.helpers({
-    temasCount: function() 
+    postCount: function() 
     {   
-        return Posts.find({temaId: this._id}).count();  
+        return this.postCount;  
     }});

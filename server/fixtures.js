@@ -14,12 +14,21 @@ if (Posts.find().count() === 0) {
 
    var temaSaxo = Temas.insert({
       title: 'SAXOFONIA',
-      url: 'http://google.com/?q=test-'
+      url: 'http://google.com/?q=test-',
+      postCount: 2
     });
+    
+   var temaOrgano = Temas.insert({
+      title: 'ORGANO',
+      url: 'http://google.com/?q=test-',
+      postCount: 0
+    });
+    
     
     var temaGuitarra = Temas.insert({
       title: 'GUITARRA ELECTRICA',
-      url: 'http://google.com/?q=test-'
+      url: 'http://google.com/?q=test-',
+      postCount: 10
     });
   
   

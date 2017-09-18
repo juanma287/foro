@@ -17,12 +17,14 @@ Template.postSubmit.events({
       title: $(e.target).find('[name=title]').val(),
       temaId: $(e.target).find('[name=temas]').val()
     };
+  
     
     // Validamos un pocoo 
     var errors = validarPost(post);
     if (errors.title || errors.descripcion)
       return Session.set('postSubmitErrors', errors);
     
+
     // llamamos al metodo postInsert, pasamos el objeto post y habilitamos un callback, (que se ejecutará cuando el método del lado del servidor finalice)
     Meteor.call('postInsert', post, function(error, result) {
      // Las funciones de retorno (callback) de los métodos Meteor siempre tienen dos argumentos (error, result)
