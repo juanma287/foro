@@ -1,7 +1,15 @@
 <template name="temasPage">
    
    <div class="post-page page">
-           {{> temasItem}}
+  <div class="post">
+        <div class="post-content">
+          <h3><a href="{{pathFor 'temasPage'}}">{{title}}</a></h3>
+          <p>
+               {{postCount}} posts
+          </p>
+
+        </div>
+  </div>
    <ul class="comments">
 
       {{#each posts}}

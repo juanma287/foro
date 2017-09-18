@@ -31,6 +31,12 @@ Meteor.publish('singlePost', function(id) {
 });
 
 
+// publicamos la coleccion de post para un tema en particular
+Meteor.publish('posts_temas', function() {
+  return Posts.find();
+});
+
+
 // publicamos la coleccion de temas
 Meteor.publish('temas', function() {
   return Temas.find();
