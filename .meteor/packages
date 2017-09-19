@@ -27,3 +27,4 @@ accounts-password
 check
 ejson
 session
+tap:i18n

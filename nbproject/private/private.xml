@@ -5,11 +5,12 @@
         <group>
             <file>file:/C:/foroplash/client/templates/posts/post_submit.html</file>
             <file>file:/C:/foroplash/client/templates/temas/temas_item.js</file>
+            <file>file:/C:/foroplash/server/fixtures.js</file>
+            <file>file:/C:/foroplash/client/templates/posts/post_item.js</file>
             <file>file:/C:/foroplash/client/templates/posts/post_submit.js</file>
-            <file>file:/C:/foroplash/server/publications.js</file>
             <file>file:/C:/foroplash/lib/collections/posts.js</file>
+            <file>file:/C:/foroplash/lib/collections/comments.js</file>
             <file>file:/C:/foroplash/lib/router.js</file>
-            <file>file:/C:/foroplash/client/templates/temas/temas_page.js</file>
             <file>file:/C:/foroplash/client/templates/temas/temas_item.html</file>
         </group>
     </open-files>
