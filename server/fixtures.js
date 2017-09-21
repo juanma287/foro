@@ -15,7 +15,7 @@ if (Posts.find().count() === 0) {
    var temaSaxo = Temas.insert({
       title: 'SAXOFONIA',
       url: 'http://google.com/?q=test-',
-      postCount: 2
+      postCount: 3
     });
     
    var temaOrgano = Temas.insert({

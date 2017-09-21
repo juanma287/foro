@@ -1,3 +1,27 @@
-{ 
-    "hello": "Hey there" 
+{
+    "Foro Plash": "plash forum",
+    "Temas": "themes",
+    "Mas votados": "Most voted",
+    "Crear Post": "Create Post",
+    "Nuevos Posts": "New Posts",
+    "Acceso Denegado": "Access denied",
+    "Para": "To create a post, please Log In",
+    "Comentario sobre esta publicación": "Comment on this post",
+    "Enviar comentario": "Send comment",
+    "No hay notificaciones": "No notifications",
+    "Notificaciones": "Notifications",
+    "Ha comentado tu post": "Commented on your post",
+    "Título": "Title",
+    "Nombre de su post": "Name of your post",
+    "Nombre del post":"Name of your post",
+    "Descripción": "Description",
+    "Guardar cambios": "Save changes",
+    "Borrar post": "Delete post",
+    "Tema": "Teme",
+    "Crear": "Create",
+    
+      "Creado por": "Created by",
+   "Editar Post": "Edit Post",
+   "Discusión": "Discussion"
+ 
 }

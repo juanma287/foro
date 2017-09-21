@@ -15,14 +15,14 @@ para saber donde va cada plantilla.
       <h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
        <p>
            {{pluralize votes "Voto"}},
-           Creado por   <b>{{author}}</b> 
+            {{_ "Creado por"}}  <b>{{author}}</b> 
             <!-- Uso creoElPost para que solo pueda editar un post el usaurio que lo creo-->   
-           {{#if creoElPost}}<a href="{{pathFor 'postEdit'}}">Editar Post</a>{{/if}}
+           {{#if creoElPost}}<a href="{{pathFor 'postEdit'}}"> {{_ "Editar Post"}}</a>{{/if}}
            <br>
             <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comentario"}}</a>
       </p>
     </div>
     
-    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discusión</a>
+    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">{{_ "Discusión"}}</a>
   </div>
 </template>

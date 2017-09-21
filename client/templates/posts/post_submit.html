@@ -7,7 +7,7 @@
     <form class="main form page">
 
         <div class="form-group {{errorClass 'tema'}}">        
-              <label class="control-label" for="tema">Tema</label>
+              <label class="control-label" for="tema">{{_ "Tema"}}</label>
               <br>
               <select name="temas">
                   {{#each tema in temas}}
@@ -18,15 +18,15 @@
 
         <div class="form-group {{errorClass 'title'}}">
 
-            <label class="control-label" for="title">Título</label>
+            <label class="control-label" for="title">{{_ "Título"}}</label>
             <div class="controls">
-                <input name="title" id="title" type="text" value="" placeholder="Nombre del post" class="form-control"/>
+                <input name="title" id="title" type="text" value="" placeholder='{{_ "Nombre del post"}}' class="form-control"/>
                 <span class="help-block">{{errorMessage 'title'}}</span>
             </div>
         </div>
 
         <div class="form-group {{errorClass 'descripcion'}}">
-            <label class="control-label" for="descripcion">Descripción</label>
+            <label class="control-label" for="descripcion">{{_ "Descripción"}}</label>
             <div class="controls">        
                 <textarea name="descripcion" id="descripcion" class="form-control" rows="6"></textarea>
                 <span class="help-block">{{errorMessage 'descripcion'}}</span>
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <input type="submit" value="Crear" class="btn btn-primary"/>
+        <input type="submit" value='{{_ "Crear"}}' class="btn btn-primary"/>
 
     </form>
 </template>

@@ -8,15 +8,15 @@ and open the template in the editor.
       
 
     <div class="form-group {{errorClass 'title'}}">
-      <label class="control-label" for="title">Title</label>
+      <label class="control-label" for="title">{{_ "Título"}}</label>
       <div class="controls">
-          <input name="title" id="title" type="text" value="{{title}}" placeholder="Nombre de su post" class="form-control"/>
+          <input name="title" id="title" type="text" value="{{title}}" placeholder='{{_ "Nombre de su post"}}' class="form-control"/>
           <span class="help-block">{{errorMessage 'title'}}</span>
       </div>
     </div>
       
     <div class="form-group {{errorClass 'descripcion'}}">
-      <label class="control-label" for="descripcion">Descripción</label>
+      <label class="control-label" for="descripcion">{{_ "Descripción"}}</label>
       <div class="controls">
          <textarea name="descripcion" id="descripcion" class="form-control" value="{{descripcion}}"></textarea>
           <span class="help-block">{{errorMessage 'descripcion'}}</span>
@@ -24,9 +24,9 @@ and open the template in the editor.
     </div>
       
       
-    <input type="submit" value="Guardar cambios" class="btn btn-primary submit"/>
+    <input type="submit" value='{{_ "Guardar cambios"}}' class="btn btn-primary submit"/>
     
     <hr/>
-    <a class="btn btn-danger delete" href="#">Borrar post</a>
+    <a class="btn btn-danger delete" href="#">{{_ "Borrar post"}} </a>
   </form>
 </template>
