@@ -11,26 +11,73 @@ if (Posts.find().count() === 0) {
   });
   var sacha = Meteor.users.findOne(sachaId);
 
-
-   var temaSaxo = Temas.insert({
+  
+   // temas generales
+     var temaSaxoGeneal = Temasgenerales.insert({
       title: 'SAXOFONIA',
-      url: 'http://google.com/?q=test-',
+      temasCount: 2
+    });
+    
+    var temaoRganoGeneal = Temasgenerales.insert({
+      title: 'ORGANO',
+      temasCount: 1
+    });
+    
+     var temaGuitarraGeneal = Temasgenerales.insert({
+      title: 'GUITARRA',
+      temasCount: 2
+    });
+    
+    var temaAcordeonGeneral = Temasgenerales.insert({
+      title: 'ACORDEON',
+      temasCount: 0
+    });
+  
+    var temaOtrosGeneral = Temasgenerales.insert({
+      title: 'OTRO',
+      temasCount: 1
+    });
+
+
+
+   // temas
+    var temaOtro = Temas.insert({
+      temagenerId: temaOtrosGeneral,
+      title: 'OTRO',
+      postCount: O
+    });
+    
+   
+   var temaSaxo = Temas.insert({
+      temagenerId: temaSaxoGeneal,
+      title: 'SAXO PARA PRINCIPIANTES',
       postCount: 3
     });
     
+   var temaSaxoAvanzado = Temas.insert({
+      temagenerId: temaSaxoGeneal,
+      title: 'SAXO PARA AVANZADOS',
+      postCount: 0
+    });
+    
    var temaOrgano = Temas.insert({
+      temagenerId: temaoRganoGeneal,
       title: 'ORGANO',
-      url: 'http://google.com/?q=test-',
       postCount: 0
     });
     
     
     var temaGuitarra = Temas.insert({
+      temagenerId: temaGuitarraGeneal,
       title: 'GUITARRA ELECTRICA',
-      url: 'http://google.com/?q=test-',
       postCount: 10
     });
   
+      var temaGuitarraCriolla = Temas.insert({
+      temagenerId: temaGuitarraGeneal,
+      title: 'GUITARRA CRIOLLA',
+      postCount: 0
+    });
   
 
   var telescopeId = Posts.insert({

@@ -13,15 +13,19 @@
     "Ha comentado tu post": "Comentou sua postagem",
     "Título": "Título",
     "Nombre de su post": "Nome da sua postagem",
-     "Nombre del post":"Nome da sua postagem",
+    "Nombre del post": "Nome da sua postagem",
     "Descripción": "descrição",
     "Guardar cambios": "Guardar mudanças",
     "Borrar post": "Apagar postagem",
     "Tema": "Tema",
     "Crear": "Criar",
-    
-      "Creado por": "Criado pela",
+    "Creado por": "Criado pela",
+    "Editar Post": "Editar postagem",
+    "Discusión": "Ajuda",
+   "Ver más": "Ver mais",
    "Editar Post": "Editar postagem",
-   "Discusión": "Ajuda"
- 
+   "Inicia sesión para dejar un comentario": "Entre para deixar um comentário",
+   "posts": "Postagens",
+   "Ver Posts": "Ver postagens"
+
 }

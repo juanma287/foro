@@ -17,7 +17,7 @@ pero, por ahora, solo la vamos a usar para mostrar {{> PostItem}}
                       {{pluralize votes "Voto"}},
                       
                        <!-- Uso creoElPost para que solo pueda editar un post el usaurio que lo creo-->   
-                      {{#if creoElPost}}<a href="{{pathFor 'postEdit'}}">Editar Post</a>{{/if}}
+                      {{#if creoElPost}}<a href="{{pathFor 'postEdit'}}">{{_ "Editar Post"}}</a>{{/if}}
                   
                        <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comentario"}}</a>
                  </p>
@@ -42,7 +42,7 @@ pero, por ahora, solo la vamos a usar para mostrar {{> PostItem}}
     {{#if currentUser}}
       {{> commentSubmit}}
     {{else}}
-      <p>Inicia sesión para dejar un comentario.</p>
+      <p>{{_ "Inicia sesión para dejar un comentario"}}.</p>
     {{/if}}
   </div>
 </template>

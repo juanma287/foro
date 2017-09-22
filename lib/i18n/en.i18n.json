@@ -13,15 +13,20 @@
     "Ha comentado tu post": "Commented on your post",
     "Título": "Title",
     "Nombre de su post": "Name of your post",
-    "Nombre del post":"Name of your post",
+    "Nombre del post": "Name of your post",
     "Descripción": "Description",
     "Guardar cambios": "Save changes",
     "Borrar post": "Delete post",
     "Tema": "Teme",
     "Crear": "Create",
-    
-      "Creado por": "Created by",
+    "Creado por": "Created by",
+    "Editar Post": "Edit Post",
+    "Discusión": "Discussion",
+   "Ver más": "see more",
    "Editar Post": "Edit Post",
-   "Discusión": "Discussion"
- 
+   "Inicia sesión para dejar un comentario": "Sign in to leave a comment",
+   "posts": "posts",
+   "Ver Posts": "view Posts"
+
+
 }

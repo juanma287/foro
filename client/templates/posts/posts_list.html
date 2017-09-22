@@ -23,7 +23,7 @@ la función de los template es mostrar o iterar sobre variables
     {{/each}}
     
     {{#if nextPath}}
-      <a class="load-more" href="{{nextPath}}">Ver más</a>
+      <a class="load-more" href="{{nextPath}}">{{_ "Ver más"}}</a>
       {{else}}
       {{#unless ready}}
         {{> spinner}}

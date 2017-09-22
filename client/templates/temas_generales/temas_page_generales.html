@@ -1,21 +1,20 @@
-<template name="temasPage">
+<template name="temasPageGenerales">
    
    <div class="post-page page">
   <div class="post">
         <div class="post-content">
           <h3><a href="{{pathFor 'temasPage'}}">{{title}}</a></h3>
           <p>
-               {{postCount}} {{_ "posts"}}
+               {{temasCount}} {{_ "posts"}}
           </p>
 
         </div>
   </div>
    <ul class="comments">
 
-      {{#each posts}}
-      
-        {{> postItem}}
-      {{/each}}
+     {{#each temas}}
+           {{> temasItemGenerales}}
+    {{/each}}
 
   </ul>
    </div>
