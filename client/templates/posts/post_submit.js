@@ -38,7 +38,14 @@ Template.postSubmit.events({
       // Si todo ha funcionado bien, redirigiremos al usuario a la página de discusión del post recién creado.
       Router.go('postPage', {_id: result._id});  
     });
- }
+ },
+ 
+  "change #yearpicker": function(evt) {
+        var newValue = $(evt.target).val();
+        Session.set("tema", newValue);
+      
+      }
+  
 });
 
 // En versiones superiores agregar :: Meteor add session :: (ya que sesion no viene de forma predeterminada)
@@ -58,6 +65,18 @@ Template.postSubmit.helpers({
   },
   temas: function()
     {    
+     
+    var tema = Session.get("tema");
+    
+    if(tema)
+       return Temas.find({temagenerId: tema});
+    else     
      return Temas.find();
-    }
+    },
+   temasGenerales: function()
+    {    
+     return Temasgenerales.find();
+    }   
+    
+    
 });

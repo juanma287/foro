@@ -7,3 +7,5 @@
 
 // por esta verga no te mostraba nada
 Meteor.subscribe('temas');
+
+Meteor.subscribe('temasgenerales');

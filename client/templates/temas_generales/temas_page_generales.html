@@ -3,9 +3,9 @@
    <div class="post-page page">
   <div class="post">
         <div class="post-content">
-          <h3><a href="{{pathFor 'temasPage'}}">{{title}}</a></h3>
+          <h3><a href="{{pathFor 'temasPageGenerales'}}">{{title}}</a></h3>
           <p>
-               {{temasCount}} {{_ "posts"}}
+               {{temasCount}} {{_ "Subtemas"}}
           </p>
 
         </div>
@@ -13,7 +13,7 @@
    <ul class="comments">
 
      {{#each temas}}
-           {{> temasItemGenerales}}
+           {{> temasItem}}
     {{/each}}
 
   </ul>

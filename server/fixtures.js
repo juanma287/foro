@@ -3,11 +3,11 @@ if (Posts.find().count() === 0) {
 
   // create two users
   var tomId = Meteor.users.insert({
-    profile: { name: 'Tom Coleman' }
+    profile: { name: 'El caio' }
   });
   var tom = Meteor.users.findOne(tomId);
   var sachaId = Meteor.users.insert({
-    profile: { name: 'Sacha Greif' }
+    profile: { name: 'La momia' }
   });
   var sacha = Meteor.users.findOne(sachaId);
 
@@ -44,7 +44,7 @@ if (Posts.find().count() === 0) {
     var temaOtro = Temas.insert({
       temagenerId: temaOtrosGeneral,
       title: 'OTRO',
-      postCount: O
+      postCount: 0
     });
     
    

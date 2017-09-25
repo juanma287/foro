@@ -1,6 +1,6 @@
 
 Template.listaTemasGeneales.helpers({ 
-    temasGenerales: function()
+    temasgenerales: function()
     {    
      return Temasgenerales.find();
   }

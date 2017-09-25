@@ -42,6 +42,11 @@ Meteor.publish('temas', function() {
   return Temas.find();
 });
 
+
+// publicamos la coleccion de temas generales
+Meteor.publish('temasgenerales', function() {
+  return Temasgenerales.find();
+});
 // probe con esto pero no andubo
 /**
 Meteor.publish('temas', function(id) {
